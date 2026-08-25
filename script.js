@@ -1,5 +1,5 @@
 (() => {
-  const CA = "0xComingSoon";
+  const CA = "0x282baf42b2a50bffd00d0b8755146d2ebb8a957b";
   const toast = document.getElementById("toast");
   const nav = document.getElementById("nav");
   const navToggle = document.getElementById("navToggle");
