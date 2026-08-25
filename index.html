@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MARTIANS — Martians paired with Spacex</title>
+  <meta name="description" content="Martians paired with Spacex. Trade MARTIANS on Robinhood Chain via Uniswap." />
+  <link rel="icon" href="./logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="dust" aria-hidden="true"></div>
+
+  <nav class="nav" id="nav">
+    <a class="nav-brand" href="#top">
+      <img src="./logo.png" alt="Martians logo" class="nav-logo" />
+      <span class="nav-wordmark">MARTIANS</span>
+    </a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#howto">How to Buy</a>
+      <a href="#join">Join Us</a>
+      <a href="https://x.com/martians_rh" target="_blank" rel="noopener noreferrer" class="nav-x">X</a>
+      <a class="btn btn-buy nav-buy" href="https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0xComingSoon" target="_blank" rel="noopener noreferrer">Buy</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#howto">How to Buy</a>
+    <a href="#join">Join Us</a>
+    <a href="https://x.com/martians_rh" target="_blank" rel="noopener noreferrer">Twitter / X</a>
+    <a class="btn btn-buy" href="https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0xComingSoon" target="_blank" rel="noopener noreferrer">Buy on Uniswap</a>
+  </div>
+
+  <header class="hero" id="top">
+    <div class="hero-bg">
+      <img src="./twitter.jpg" alt="" class="hero-banner" />
+      <div class="hero-overlay"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="pulse-dot"></span>
+        Robinhood Chain · Live on Uniswap
+      </div>
+      <div class="hero-logo-wrap reveal">
+        <img src="./logo.png" alt="Martians" class="hero-logo float-y" />
+        <div class="logo-ring"></div>
+        <div class="logo-ring delay"></div>
+      </div>
+      <h1 class="hero-title reveal">
+        <span class="glitch" data-text="MARTIANS">MARTIANS</span>
+      </h1>
+      <p class="hero-tagline reveal">Martians paired with Spacex</p>
+      <div class="token-pills reveal">
+        <span class="pill">$MARTIANS</span>
+        <span class="pill">Robinhood Chain</span>
+        <span class="pill">Uniswap</span>
+      </div>
+      <div class="hero-actions reveal">
+        <a class="btn btn-buy btn-lg magnetic" href="https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0xComingSoon" target="_blank" rel="noopener noreferrer">
+          <span>Buy $MARTIANS</span>
+        </a>
+        <button class="btn btn-ghost btn-lg" id="copyCaHero" type="button">
+          Copy CA
+        </button>
+      </div>
+      <div class="ca-box reveal">
+        <span class="ca-label">Contract Address</span>
+        <code class="ca-value" id="caValue">0xComingSoon</code>
+        <button class="ca-copy" id="copyCa" type="button" aria-label="Copy contract address">Copy</button>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span></span>
+    </div>
+  </header>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>MARTIANS</span><span>$MARTIANS</span><span>ROBINHOOD CHAIN</span><span>PAIRED WITH SPACEX</span><span>TO MARS</span><span>BUY ON UNISWAP</span>
+      <span>MARTIANS</span><span>$MARTIANS</span><span>ROBINHOOD CHAIN</span><span>PAIRED WITH SPACEX</span><span>TO MARS</span><span>BUY ON UNISWAP</span>
+    </div>
+  </div>
+
+  <section class="section about" id="about">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <p class="eyebrow">Mission Brief</p>
+        <h2>About <span class="accent">Martians</span></h2>
+        <p class="lead">Martians paired with Spacex — a Robinhood Chain memecoin built for the next frontier of on-chain trading.</p>
+      </div>
+
+      <div class="about-grid">
+        <article class="about-card tilt reveal">
+          <div class="img-frame">
+            <img src="./1.jpg" alt="First contact on Mars" loading="lazy" />
+            <div class="img-shine"></div>
+          </div>
+          <h3>First Contact</h3>
+          <p>Born on Robinhood Chain. Built for traders who want Mars-level upside with Uniswap liquidity.</p>
+        </article>
+        <article class="about-card tilt reveal">
+          <div class="img-frame">
+            <img src="./2.jpg" alt="Mars markets crew" loading="lazy" />
+            <div class="img-shine"></div>
+          </div>
+          <h3>Mars Markets</h3>
+          <p>$MARTIANS is the ticker. Martians is the name. The mission is simple: buy, build, colonize the chart.</p>
+        </article>
+        <article class="about-card tilt reveal">
+          <div class="img-frame">
+            <img src="./3.jpg" alt="Alliance on Mars" loading="lazy" />
+            <div class="img-shine"></div>
+          </div>
+          <h3>Paired with Spacex</h3>
+          <p>Culture meets chain. Martians pairs memetic energy with Robinhood Chain speed — destination: Mars.</p>
+        </article>
+      </div>
+
+      <div class="feature-strip reveal">
+        <div class="feature-media tilt">
+          <img src="./4.jpg" alt="Martians colony" loading="lazy" />
+        </div>
+        <div class="feature-copy">
+          <h3>Why Martians?</h3>
+          <ul class="check-list">
+            <li><strong>Token</strong> — Martians ($MARTIANS)</li>
+            <li><strong>Chain</strong> — Robinhood Chain</li>
+            <li><strong>Trade</strong> — Uniswap swap ready</li>
+            <li><strong>Vibe</strong> — Martians paired with Spacex</li>
+          </ul>
+          <a class="btn btn-buy magnetic" href="https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0xComingSoon" target="_blank" rel="noopener noreferrer">Launch Swap</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section gallery" id="gallery">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <p class="eyebrow">Transmission Feed</p>
+        <h2>Surface <span class="accent">Ops</span></h2>
+        <p class="lead">Visuals from the colony — scroll through the mission gallery.</p>
+      </div>
+      <div class="bento">
+        <figure class="bento-item tall tilt reveal"><img src="./5.jpg" alt="Martians scene 5" loading="lazy" /><figcaption>Colony dawn</figcaption></figure>
+        <figure class="bento-item tilt reveal"><img src="./6.jpg" alt="Martians scene 6" loading="lazy" /><figcaption>Dust run</figcaption></figure>
+        <figure class="bento-item tilt reveal"><img src="./7.jpg" alt="Martians scene 7" loading="lazy" /><figcaption>Orbit check</figcaption></figure>
+        <figure class="bento-item wide tilt reveal"><img src="./8.jpg" alt="Martians scene 8" loading="lazy" /><figcaption>Flag plant</figcaption></figure>
+        <figure class="bento-item tilt reveal"><img src="./9.jpg" alt="Martians scene 9" loading="lazy" /><figcaption>Crew ready</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section howto" id="howto">
+    <div class="section-inner">
+      <div class="section-head reveal">
+        <p class="eyebrow">Launch Sequence</p>
+        <h2>How to <span class="accent">Buy</span></h2>
+        <p class="lead">Get $MARTIANS on Uniswap — Robinhood Chain in a few clicks.</p>
+      </div>
+
+      <div class="steps">
+        <article class="step reveal">
+          <div class="step-num">01</div>
+          <div class="step-body">
+            <h3>Get a Wallet</h3>
+            <p>Use a wallet that supports Robinhood Chain and connect it to Uniswap.</p>
+          </div>
+          <div class="step-art">
+            <img src="./6.jpg" alt="" loading="lazy" />
+          </div>
+        </article>
+        <article class="step reveal">
+          <div class="step-num">02</div>
+          <div class="step-body">
+            <h3>Open Uniswap</h3>
+            <p>Hit Buy and open the official Uniswap swap link for Robinhood Chain.</p>
+          </div>
+          <div class="step-art">
+            <img src="./7.jpg" alt="" loading="lazy" />
+          </div>
+        </article>
+        <article class="step reveal">
+          <div class="step-num">03</div>
+          <div class="step-body">
+            <h3>Swap for $MARTIANS</h3>
+            <p>Confirm the contract <code>0xComingSoon</code>, set amount, and swap into Martians.</p>
+          </div>
+          <div class="step-art">
+            <img src="./9.jpg" alt="" loading="lazy" />
+          </div>
+        </article>
+      </div>
+
+      <div class="howto-cta reveal">
+        <a class="btn btn-buy btn-lg magnetic" href="https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0xComingSoon" target="_blank" rel="noopener noreferrer">Buy on Uniswap</a>
+        <p class="tiny">Always verify CA: <code>0xComingSoon</code></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section join" id="join">
+    <div class="join-bg">
+      <img src="./twitter.jpg" alt="" />
+      <div class="join-veil"></div>
+    </div>
+    <div class="section-inner join-inner">
+      <div class="join-panel reveal">
+        <img src="./logo.png" alt="" class="join-logo float-y" />
+        <p class="eyebrow">Crew Assembly</p>
+        <h2>Join <span class="accent">Us</span></h2>
+        <p class="lead">Follow the mission, share the signal, and ride with the Martians.</p>
+        <div class="join-actions">
+          <a class="btn btn-buy btn-lg magnetic" href="https://x.com/martians_rh" target="_blank" rel="noopener noreferrer">Follow on X</a>
+          <a class="btn btn-ghost btn-lg magnetic" href="https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0xComingSoon" target="_blank" rel="noopener noreferrer">Buy $MARTIANS</a>
+        </div>
+        <div class="social-row">
+          <a class="social-card tilt" href="https://x.com/martians_rh" target="_blank" rel="noopener noreferrer">
+            <img src="./twitter.jpg" alt="Martians on X" />
+            <span>@martians_rh</span>
+          </a>
+          <div class="social-card tilt token-card">
+            <span class="token-name">Martians</span>
+            <span class="token-sym">$MARTIANS</span>
+            <span class="token-desc">Martians paired with Spacex</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="./logo.png" alt="" />
+        <div>
+          <strong>MARTIANS</strong>
+          <p>Martians paired with Spacex</p>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#howto">How to Buy</a>
+        <a href="#join">Join Us</a>
+        <a href="https://x.com/martians_rh" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+      </div>
+      <p class="disclaimer">$MARTIANS is a memecoin. Not financial advice. Trade responsibly.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status">Copied!</div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
