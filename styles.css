@@ -197,7 +197,7 @@ button {
   text-shadow: 0 0 12px rgba(200, 255, 0, 0.5);
 }
 
-.nav-x {
+.nav-icon {
   width: 34px;
   height: 34px;
   display: grid;
@@ -205,6 +205,29 @@ button {
   border: 1px solid var(--line);
   border-radius: 50%;
   font-weight: 700;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s, color 0.2s;
+}
+
+.nav-icon:hover {
+  border-color: var(--rh-lime);
+  background: rgba(0, 200, 5, 0.15);
+  box-shadow: var(--glow);
+  color: var(--rh-lime);
+}
+
+.nav-tg {
+  color: var(--rh-lime);
+}
+
+.btn-tg {
+  background: linear-gradient(135deg, #229ed9, #2aabee);
+  color: #fff;
+  box-shadow: 0 0 0 1px rgba(42, 171, 238, 0.35), 0 0 28px rgba(42, 171, 238, 0.35);
+}
+
+.btn-tg:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 0 0 1px rgba(42, 171, 238, 0.5), 0 0 40px rgba(42, 171, 238, 0.5);
 }
 
 .nav-toggle {
